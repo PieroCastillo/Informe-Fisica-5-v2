@@ -1,4 +1,4 @@
-\documentclass[,,/main,tex]{subfiles}
+\documentclass[../main.tex]{subfiles}
 
 \usepackage{multirow}
 \usepackage{multicol}
@@ -8,10 +8,10 @@
     \centering
     \begin{tabular}{c|c|c|c|c|c}
         \hline
-        \multirow{2}{m{3cm}}{Masa ($\delta = \pm 0.001kg$)}     
-         & \multicolumn{5}{|c}{Posiciones}\\
+        \multirow{2}{*}{Masa ($\delta = \pm 0.001kg$)}     
+         & \multicolumn{5}{c}{Posiciones}\\
         \cline{2-6}
-              &  J1  &  J2  &  J3  &  J4  &  J5 \\  
+             &  J1  &  J2  &  J3  &  J4  &  J5 \\  
         \hline
         $P_1$ &  8   &  1   &  5   &  2   &  -- \\   
         $P_2$ &  --  &  3   &  --  &  2   &  -- \\ 
@@ -21,4 +21,35 @@
     \label{ref:table1}
     \caption{Tabla de datos del experimento 1}
 \end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c|c|c|c}
+        \hline
+        \multirow{2}{*}{Masa ($\delta = \pm 0.001kg$)}     
+         & \multicolumn{5}{c}{Posiciones}\\
+        \cline{2-6}
+             &  J1  &  J2  &  J3  &  J4  &  J5 \\  
+        \hline
+        $P_1$ &  --  &  --   &  4  &  --  &  3 \\ 
+        $P_2$ &  5   &  1    &  3  &  7   &  -- \\   
+        $(P_2 + P_3)$  &  5   &  --  &  2  &  --  &  1 \\ 
+        \hline
+    \end{tabular}
+    \label{ref:table2}
+    \caption{Tabla de datos del experimento 2}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c|c|c|c|c|c|c}
+    \cline{2-9}
+                                  &  J1   &  J2    &  J3    &  J4   &  J5  & P1   & P2   & P3\\ 
+    \hline
+    Masa ($\delta = \pm 0.001kg$) &  1.1  &  10.1  &  10.1  &  19.6 & 19.3 & 10.9 & 20.4 & 1.4 \\
+    \hline 
+    \end{tabular}
+    \caption{Tabla de masas de los jinetillos y pesos.}
+\end{table}
+
 \end{document}
