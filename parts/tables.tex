@@ -1,7 +1,24 @@
 \documentclass[,,/main,tex]{subfiles}
 
 \usepackage{multirow}
+\usepackage{multicol}
 
 \begin{document}
-
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c|c|c|c}
+        \hline
+        \multirow{2}{m{3cm}}{Masa ($\delta = \pm 0.001kg$)}     
+         & \multicolumn{5}{|c}{Posiciones}\\
+        \cline{2-6}
+              &  J1  &  J2  &  J3  &  J4  &  J5 \\  
+        \hline
+        $P_1$ &  8   &  1   &  5   &  2   &  -- \\   
+        $P_2$ &  --  &  3   &  --  &  2   &  -- \\ 
+        $P_3$ &  4   &  1   &  --  &  --  &  -- \\ 
+        \hline
+    \end{tabular}
+    \label{ref:table1}
+    \caption{Tabla de datos del experimento 1}
+\end{table}
 \end{document}
