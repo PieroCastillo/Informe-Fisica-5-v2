@@ -1,6 +1,8 @@
 ## Project=specific
 main.pdf
 
+*.pdf
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
