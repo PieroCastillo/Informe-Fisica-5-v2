@@ -1,4 +1,77 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
+
+\subsection{Determinación de la masa del cuerpo}
+
+En la tabla \ref{ref:table1}, el número de posiciones (u), indica la distancia del jinetillo al punto de equilibrio de la balanza,
+ cada posición tiene una longitud de 2 cm o 0,02 m en el SI, medida con una regla de incertidumbre 0,0005 m.
+Para determinar la masa de cada pesa, se emplea la segunda condición de equilibrio mecánico, que establece que el momento 
+resultante debe ser nulo. Por tanto:
+
+\begin{equation}
+    \sum \vec{\tau}^{\: r} = 0
+\end{equation}
+
+Como las fuerzas que equilibran el contrapeso se encuentran en la misma dirección, se trabaja el vector \textit{torque} 
+de forma unidimensional.
+
+\begin{equation}
+    \sum \tau^{\: r} = 0
+\end{equation}
+\[(torque\ de\ la\ masa)-(suma\ de\ torques\ de\ los\ jinetillos)=0\]
+
+\subsubsection*{Masa de Plomo ($m_1$):}
+\[\left(F_P)(d_P\right)-\left[\left(F_{J1}\right)\left(d_{J1}\right)+\left(F_{J2}\right)\left(d_{J2}\right)+\left(F_{J3}\right)\left(d_{J3}\right)+\left(F_{J4}\right)\left(d_{J4}\right)\right]=0\]
+\[\left(m_1)(g)(d_P\right)-\left[\left(m_{J1}\right)\left(g\right)\left(d_{J1}\right)+\left(m_{J2}\right)\left(g\right)\left(d_{J2}\right)+\left(m_{J3}\right)\left(g\right)\left(d_{J3}\right)+\left(m_{J4}\right)\left(g\right)\left(d_{J4}\right)\right]=0\]
+
+Donde “$F_p$” representa el peso de la masa de plomo, “$g$” es la aceleración de la gravedad y “$d$” 
+con subíndice, es la distancia en posiciones (u) del objeto correspondiente al punto de equilibrio.
+
+\[g\left\{\left(m_1\right)\left(d_P\right)-\left[\left(m_{J1}\right)\left(d_{J1}\right)+\left(m_{J2}\right)\left(d_{J2}\right)+\left(m_{J3}\right)\left(d_{J3}\right)+\left(m_{J4}\right)\left(d_{J4}\right)\right]\right\}=0\]
+
+La aceleración de la gravedad se anula, y despejando la masa de plomo, se obtiene la siguiente expresión:
+
+\[m_1=\frac{\left(m_{J1}\right)\left(d_{J1}\right)+\left(m_{J2}\right)\left(d_{J2}\right)+\left(m_{J3}\right)\left(d_{J3}\right)+\left(m_{J4}\right)\left(d_{J4}\right)}{d_P}\]
+
+Reemplazando los valores:
+
+\[m_1=\frac{\left(0,011\right)\left(8\right)+\left(0,101\right)\left(1\right)+\left(0,101\right)\left(5\right)+\left(0,196\right)\left(2\right)}{10}\]
+
+\[m_1=0,1086\ kg\]
+
+Tomando en cuenta el valor de las masas con el menor número de decimales por tratarse de una suma:
+
+\[m_1\approx0,109\ kg\]
+
+Para hallar las incertidumbres respectivas se realiza el siguiente procedimiento:
+
+\begin{equation} \label{calc1}
+    \delta m = \frac{1,09 \times 0,02}{10\times 0,02} 
+    \left[ \frac{ \sum_{i=1}^n [m_i \Delta d_i + d_i \Delta m_i]}{1,09\times 0,02}
+    +\frac{0,0005}{10\times 0,02} \right]
+\end{equation}
+
+Donde “$d_i$” es igual a una “u” por 0,02 metros.
+
+Entonces, reemplazando:
+
+\begin{equation*}
+    \Delta m = \frac{1,09 \times 0,02}{10\times 0,02} 
+    \left[ \frac{ \sum_{i=1}^4 [m_i \Delta d_i + d_i \Delta m_i]}{1,09\times 0,02}
+    +\frac{0,0005}{10\times 0,02} \right]
+\end{equation*}
+
+\[\Delta m_1 = 2,895\times10^{-3}\]
+\[\Delta m_1\approx 0,003 kg\]
+
+La medida de la masa de plomo ($m_1$), con su respectiva incertidumbre es:
+
+\[m_1\pm\Delta m_1=0,109\pm0,003 kg\]
+
+La incertidumbre relativa es:
+
+\[\varepsilon_r=\frac{0,003}{0,109}\approx0,03=3\%\]
+
+
 \end{document}
