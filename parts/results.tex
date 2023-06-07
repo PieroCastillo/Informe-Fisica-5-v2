@@ -186,6 +186,109 @@ su efecto no fue tan significativo como se esperaba.
 
 \subsection{Determinación del Empuje y el volumen de 3 cuerpos por el Principio de Arquímedes}
 
+Se conoce por la ecuación (\ref{empuje_eq}) que:
 
+\begin{align} 
+    \Vec{E} = - \rho_{fluido} \cdot V_{objeto} \cdot \vec{g} \nonumber
+\end{align}
+
+\[ |\vec{E}|=|- \rho_{fluido}\cdot V_{objeto} \cdot \vec{g} | \]
+\begin{equation} \label{calc_21} 
+    E= \rho_{fluido}\cdot V_{objeto} \cdot g 
+\end{equation}
+
+El volumen del objeto (masas de bronce, plomo y Tecnopor), se pueden expresar en función de su densidad y masa:
+
+\begin{equation} \label{calc_22}
+    V_{objeto}=\frac{m_{objeto}}{\rho_{objeto}}
+\end{equation} 
+
+Reemplazando \ref{calc_22} en \ref{calc_21}:
+\[E=\rho_{fluido}\cdot\left( \frac{m_{objeto}}{\rho_{objeto}} \right)\cdot g\]
+
+Donde “$\rho$” representa la densidad, “V” el volumen y “E”, el módulo de la fuerza de empuje.
+
+Luego, para determinar la fuerza de empuje, es preciso emplear la segunda condición de equilibrio.
+
+Sabiendo que la relación entre las fuerzas es la siguiente:
+
+\[\vec{T} = \vec{P} - \vec{E}\]
+\[\vec{E} = \vec{P} - \vec{T}\]
+
+Donde “$\vec{T}$” representa la fuerza de tensión de la cuerda, “$\vec{P}$” el peso del objeto,
+y “$\vec{E}$” el empuje que ejerce el fluido sobre el cuerpo.
+
+Dado que las fuerzas actúan en una sola dirección (vertical). Entonces:
+
+\[|\vec{E}|=|\vec{P}|-|\vec{T}|\]
+
+\begin{align} \label{calc_23}
+    E=P-T
+\end{align}
+Reemplazando (\ref{calc_23}) en (\ref{equilibrio_2}):
+
+\[\tau_E-\tau_P+\tau_T=0\]
+\[\tau_E=\tau_P-\tau_T \]
+
+Donde “$\vec{\tau}_E$”, “$\vec{\tau}_P$” y “$\vec{\tau}_T$” representan los módulos de los torques ejercidos 
+por las fuerzas de empuje, peso y tensión respectivamente.
+
+Pero la tensión es en realidad, el torque que ejercen los jinetillos para equilibrar el contrapeso. Por tanto:
+
+\begin{equation} \label{calc_24}
+    E\cdot d=m\cdot g\cdot d - g \cdot \sum_{i=1}^n (m_i\cdot d_i )
+\end{equation}
+
+Donde “d” es la distancia en metros de la pesa al punto de
+equilibrio de la balanza de Arquímedes, mientras que la 
+sumatoria representa, la suma del producto de las masas por 
+las posiciones de cada jinetillo utilizado para equilibrar el 
+contrapeso en cada uno de los tres casos.
+
+Reemplazando (\ref{calc_21}) en (\ref{calc_24}):
+
+\[\rho_{fluido}\cdot V_{objeto}\rho g=m\cdot g\cdot d-g\cdot\sum_{i=1}^n (m_i\cdot d_i ) \]
+\[\rho_{fluido}\cdot V_{objeto}=m\cdot d-\sum_{i=1}^n (m_i\cdot d_i ) \]
+
+Luego, para determinar el volumen de cada uno de los tres objetos (dado que se encuentran completamente sumergidos):
+
+\begin{equation} \label{calc_25}
+    V_{objeto}=\frac{(m\cdot d -\sum_{i=1}^n (m_i\cdot d_i ) )}{\rho_{fluido}} 
+\end{equation}
+
+\subsection{Volumen de la masa de plomo ($V_1$):}
+
+\[V_1=\frac{m_1\cdot d_1- (m_J_3 \cdot d_J_3+m_J_5 \cdot d_J_5 )}{\rho_{agua}} \]
+Reemplazando valores:
+\[V_1=\frac{(0,109)(0,20)-[(0,101)(0,08)+(0,193)(0,06)]}{998}\]
+\[V_1\approx2,14\times10^{-6}\,  m^3 \]
+
+Expresado en $cm^3$:
+
+\[V_1=2,14cm^3\]
+
+La incertidumbre puede expresarse de la siguiente manera:
+
+\begin{align} \nonumber
+    \Delta V=m\cdot\Delta d+d\cdot\Delta m+\sum_{i=1}^n (m_i \cdot\Delta d_i+d_i \cdot\Delta m_i ) 
+\end{align}
+
+Dado que, la incertidumbre de la distancia “$\Delta d$”, se debe exclusivamente a la precisión de la
+regla utilizada para realizar todas las mediciones, entonces:
+
+\begin{equation} \label{calc_26}
+    \Delta V=d\cdot\Delta m+\Delta\cdot m_i \cdot \sum_{i=1}^n (d_i ) +\Delta d\left[\sum_{k=1}^s(m_k ) +m\right]
+\end{equation}
+
+En esta ecuación, se considera la densidad del agua como un valor teórico idealizado, ya que el valor utilizado es ampliamente aceptado en la literatura científica y se ha obtenido mediante métodos de medición más precisos y sofisticados que los utilizados en el experimento actual.
+
+De este modo, la incertidumbre del volumen de la pesa de plomo es:
+
+\[Delta V_1=(0,20)(0,003)+(0,001)(0,08+0,06)+(0,0005)(0,101+0,193+0,109)\]
+
+\[\Delta V_1\approx9,42\times 10^{-4} \, m^3\]
+
+Expresado en cm3:
+\[\Delta V_1\approx942 \, cm^3\]
 
 \end{document}
