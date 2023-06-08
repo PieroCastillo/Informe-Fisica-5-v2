@@ -74,7 +74,7 @@ La incertidumbre relativa es:
 \[\varepsilon_r=\frac{0,003}{0,109}\approx0,03=3\%\]
 
 Una incertidumbre muy baja con respecto a la medida, por lo cual, 
-posee una alta precisión. Asimismo, al comparar el resultado 
+posee una alta precisión. Asim_ismo, al comparar el resultado 
 calculado con la medición de la masa de plomo en la balanza 
 digital (véase la tabla \ref{ref:table3}), se observa que la medida es 
 idéntica en magnitud, pero respecto a la incertidumbre es
@@ -253,42 +253,93 @@ Reemplazando (\ref{calc_21}) en (\ref{calc_24}):
 Luego, para determinar el volumen de cada uno de los tres objetos (dado que se encuentran completamente sumergidos):
 
 \begin{equation} \label{calc_25}
-    V_{objeto}=\frac{(m\cdot d -\sum_{i=1}^n (m_i\cdot d_i ) )}{\rho_{fluido}} 
+    V_{objeto}=\frac{(m\cdot d -\sum_{i=1}^n (m_i\cdot d_i ) )}{d\cdot \rho_{fluido}} 
 \end{equation}
 
 \subsection{Volumen de la masa de plomo ($V_1$):}
 
-\[V_1=\frac{m_1\cdot d_1- (m_J_3 \cdot d_J_3+m_J_5 \cdot d_J_5 )}{\rho_{agua}} \]
+\[V_1=\frac{m_1d-\left(m_{J3}d_{J3}+m_{J5}d_{J5}\right)}{d.\ \rho_{agua}}\]
 Reemplazando valores:
-\[V_1=\frac{(0,109)(0,20)-[(0,101)(0,08)+(0,193)(0,06)]}{998}\]
-\[V_1\approx2,14\times10^{-6}\,  m^3 \]
-
+\[V_1=\frac{\left(0,109\right)\left(0,20\right)-\left[\left(0,101\right)\left(0,08\right)+\left(0,193\right)\left(0,06\right)\right]}{\left(0,20\right)\left(998\right)}\]
+\[V_1\approx1,07\times{10}^{-5}\ m^3\]
 Expresado en $cm^3$:
-
-\[V_1=2,14cm^3\]
-
+\[V_1=10,7\,cm^3\]
 La incertidumbre puede expresarse de la siguiente manera:
-
-\begin{align} \nonumber
-    \Delta V=m\cdot\Delta d+d\cdot\Delta m+\sum_{i=1}^n (m_i \cdot\Delta d_i+d_i \cdot\Delta m_i ) 
-\end{align}
-
-Dado que, la incertidumbre de la distancia “$\Delta d$”, se debe exclusivamente a la precisión de la
-regla utilizada para realizar todas las mediciones, entonces:
-
+\[\Delta V=m\Delta d+d\Delta m
+  +\sum_i^n (m_i\Delta di+di\Delta m_i) +
+   \frac{m_1d-(m_{J3}d_{J3}+m_{J5}d_{J5})}{d} 
+   \left[ \frac{m\Delta d+d\Delta m+  \sum_i^n (m_i\Delta d_i+d_i\Delta m_i) }{m_1d-m_{J3}d_{J3}+m_{J5}d_{J5}} + \frac{\Delta d}{d}  \right]\]
+\[\Delta V= m\Delta d+d\Delta m +
+    \sum_i^n (m_i\Delta d_i+d_i\Delta m_i) + \frac{1}{d}
+    \left[ m\Delta d+d\Delta m + \sum_i^n (m_i\Delta d_i+d_i\Delta m_i) + \frac{m\cdot d-(m_{J3}d_{J3}+m_{J5}d_{J5} \Delta d}{d} \right]\]
 \begin{equation} \label{calc_26}
-    \Delta V=d\cdot\Delta m+\Delta\cdot m_i \cdot \sum_{i=1}^n (d_i ) +\Delta d\left[\sum_{k=1}^s(m_k ) +m\right]
+    \Delta V= m\Delta d+d\Delta m+
+    \sum_i^n(m_i\Delta d_i+d_i\Delta m_i)\left[1+\frac{1}{d}\right]+
+    \frac{m\cdot d-(\sum^i_n(m_i\cdot d_i))\Delta d}{d^2}
 \end{equation}
+En esta ecuación, se considera la densidad del agua como un valor teórico idealizado, ya que el valor 
+utilizado es ampliamente aceptado en la literatura científica y se ha obtenido mediante métodos de medición 
+más precisos y sofisticados que los utilizados en el experimento actual.
+De este modo, empleando la ecuación (\ref{calc_26}), la incertidumbre del volumen de la pesa de plomo es:
+\[\Delta V_1\approx 0,546 m^3\]
+Expresado en $cm^3$:
+\[\Delta V_1\approx 546000 cm^3\]
+La medida con su incertidumbre expresado en centímetros cúbicos ($cm^3$) por tratarse de cifras muy pequeñas:
+\[V_1\pm\Delta V_1=10,7\pm 546000,0 cm^3\]
+La incertidumbre relativa es:
+\[\varepsilon_R= \frac{\Delta V_1}{V_1}=546000,010,7\approx 5100000\%\]
+La propagación del error resulta notable y ejerce un impacto significativo 
+en la precisión del valor determinado, como se puede evidenciar. Este 
+fenómeno se atribuye a los extensos cálculos llevados a cabo, los cuales involucran una 
+fórmula compleja con múltiples variables. La acumulación sucesiva de dichas variables a 
+lo largo del proceso va incrementando progresivamente el error inherente, tal como se 
+manifiesta en la ecuación (\ref{calc_26}).
 
-En esta ecuación, se considera la densidad del agua como un valor teórico idealizado, ya que el valor utilizado es ampliamente aceptado en la literatura científica y se ha obtenido mediante métodos de medición más precisos y sofisticados que los utilizados en el experimento actual.
+\subsection{Volumen de la masa de bronce ($V_2$)}
+\[V_2=\frac{m_2d-\left(m_{J1}d_{J1}+m_{J2}d_{J2}+m_{J3}d_{J3}+m_{J4}d_{J4}\right)}{d.\ \rho_{agua}}\]
+Reemplazando valores:
+\[V_2=\frac{\left(0,204\right)\left(0,20\right)-\left[\left(0,011\right)\left(0,10\right)+\left(0,101\right)\left(0,02\right)+\left(0,101\right)\left(0,06\right)+\left(0,196\right)\left(0,14\right)\right]}{\left(0,20\right)\left(998\right)}\]
+\[V_2\approx2,09\times{10}^{-5}\ m^3\]
+Expresado en $cm^3$:
+\[V_2=20,9{\ cm}^3\]
+Luego, empleando la ecuación (7), su incertidumbre es:
+\[\Delta V2\approx1,02 m3\]
+Expresado en $cm^3$:
+\[\Delta V2\approx1020000 $cm^3$\]
+La medida con su incertidumbre expresado en centímetros cúbicos ($cm^3$) por tratarse de cifras muy pequeñas:
+\[V_2\pm\Delta V2=20,9\pm 1020000,0 $cm^3$\]
+La incertidumbre relativa es:
+\[\varepsilon_R=\Delta V2V2=1020000,020,9\approx4880000\%\]
+En la presente instancia, se advierte que el error relativo experimentado es aún mayor
+en comparación con el primer caso. Este resultado era previsible, dado que se empleó una 
+cantidad ampliada de jinetillos en el sistema en consideración. En consecuencia, el error 
+tiende a propagarse de manera más pronunciada debido a la influencia adicional 
+de los múltiples jinetillos involucrados.
 
-De este modo, la incertidumbre del volumen de la pesa de plomo es:
+\subsection{Volumen de la masa de Tecnopor ($V_3$)}
 
-\[Delta V_1=(0,20)(0,003)+(0,001)(0,08+0,06)+(0,0005)(0,101+0,193+0,109)\]
+Para este caso, se consideró una suma de masas, puesto que la esfera no se sumergía completamente por sí sola.
+\[V=\frac{\left(m_2+m_3\right)d-\left(m_{J1}d_{J1}+m_{J3}d_{J3}+m_{J5}d_{J5}\right)}{d.\ \rho_{agua}}\]
+Pero “V” es equivalente a $V_2+V_3$. Entonces:
+\[V_3=\frac{\left(m_2+m_3\right)d-\left(m_{J1}d_{J1}+m_{J3}d_{J3}+m_{J5}d_{J5}\right)}{d.\ \rho_{agua}}-V_2\]
+Reemplazando valores:
+\[V_3=\frac{\left(0,204+0,015\right)\left(0,20\right)-\left[\left(0,011\right)\left(0,10\right)+\left(0,101\right)\left(0,04\right)+\left(0,193\right)\left(0,02\right)\right]}{\left(0,20\right)\left(998\right)}-\left(2,09\times{10}^{-5}\right)\]
+\[V_3\approx1,53\times{10}^{-4}\ m^3\]
+Expresado en $cm^3$:
+\[V_3=153{\ cm}^3\]
+Luego, para calcular la incertidumbre, se realiza una pequeña modificación a la ecuación (7):
+\[\Delta V_3=m\Delta d+d\Delta m + \sum^i_n(m_i\Delta d_i+d_i\Delta m_i)\left[1+\frac{1}{d}\right]+\frac{md-inmidi\Delta d}{d^2}+\Delta V2…(num8)\]
+En este caso, se agregó la incertidumbre del volumen de la masa de bronce (m2). Por tanto:
+\[\Delta V3\approx2,12 m3\]
+Expresado en $cm^3$:
+\[\Delta V3\approx2120000 $cm^3$\]
+La medida con su incertidumbre expresado en centímetros cúbicos ($cm^3$) por tratarse de cifras muy pequeñas:
+\[V_3\pm\Delta V_3=153\pm 2120000 $cm^3$\]
+La incertidumbre relativa es:
+\[\varepsilon_R=\frac{\Delta V_3}{V_3}=2120000153\approx1390000\%\]
+La incertidumbre asociada a este caso particular se incrementa incluso en comparación con la suma de las incertidumbres de los dos casos previos. Este fenómeno se atribuye al efecto directo que tiene la ecuación (8) en el aumento de la incertidumbre asociada a la masa de bronce.
 
-\[\Delta V_1\approx9,42\times 10^{-4} \, m^3\]
 
-Expresado en cm3:
-\[\Delta V_1\approx942 \, cm^3\]
+
 
 \end{document}
